@@ -1,7 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @idea %>
-
+<section class="section comments">
+    <div class="container">
+        <h2 class="subtitle is-5"><strong><%= @idea.comments.count %></strong> Comments</h2>
+        <%= render @idea.comments %>
+        <div class="comment-form">
+            <hr />
+            <h3 class="subtitle is-3">Leave a reply</h3>
+             <%= render 'comments/form' %>
+        </div>
+    </div>
+</section>
 <div>
   <%= link_to "Edit this idea", edit_idea_path(@idea) %> |
   <%= link_to "Back to ideas", ideas_path %>

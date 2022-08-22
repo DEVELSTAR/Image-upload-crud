@@ -7,7 +7,9 @@
     <%= render idea %>
     <p>
       <%= link_to "Show this idea", idea %>
+
     </p>
+    <p>Comments: <%= idea.comments.count %></p>
   <% end %>
 </div>
 
