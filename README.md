@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+  before_action :set_comment, only: %i[ show edit update destroy ]
